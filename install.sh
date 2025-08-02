@@ -1,24 +1,27 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-# 🌐 Update & Install Dependencies
+echo -e "\n📦 Starting Full Termux Setup for Instagram High-Followers Hunter...\n"
+sleep 1
+
+# 🔄 Update + Upgrade
 pkg update -y && pkg upgrade -y
-pkg install git python -y
-pip install --upgrade pip --quiet --disable-pip-version-check
+
+# 🧱 Install Core Packages
+pkg install python git curl -y
+
+# 🐍 Upgrade pip & install intermix silently
+pip install --upgrade pip intermix --quiet --disable-pip-version-check
+
+# 📦 Install All Required Python Modules
 pip install requests mechanize names render user_agent telethon python-cfonts pyfiglet colorama rich beautifulsoup4 pysocks pycryptodome --no-input --disable-pip-version-check
 
-# 🧹 Remove old clone if exists
-rm -rf 7x
+# 🌐 Download the main tool (pip.py)
+echo -e "\n🌐 Downloading Tool from GitHub...\n"
+curl -O https://raw.githubusercontent.com/7xdoms/7x/main/pip.py
 
-# ⬇️ Clone the Repo
-echo -e "\n🌐 Cloning tool from GitHub...\n"
-git clone https://github.com/7xdoms/7x.git
-
-# 🚀 Start Tool
-cd 7x
-
-# Rename long script to simple name
-mv "High-Followers 💯 Meta [BY SQUAD 7X].py" 7x.py
-
-# Run it
-echo -e "\n🚀 Running the tool now...\n"
-python3 7x.py
+# ✅ Done
+echo -e "\n✅ Setup Complete!"
+echo -e "🚀 Now run your tool using:\n"
+echo -e "     python pip.py\n"
+echo -e "🔐 VPN is strongly recommended before running.\n"
+echo -e "👑 Made by: @squad_7x"
