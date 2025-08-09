@@ -1,6 +1,6 @@
 # 🔍 Instagram High-Followers Hunter
 
-A powerful and ultra-fast tool to find Instagram users with high followers.  
+A powerful and ultra-fast tool to find Instagram 2012 - 13 created accounts.  
 Designed for accuracy, speed, and real-world use with 95%+ success rate.  
 
 ---
@@ -23,7 +23,7 @@ Designed for accuracy, speed, and real-world use with 95%+ success rate.
 3. ▶️ Run the tool in any terminal or Pydroid (Android).
 4. 📥 Results will be shown live during the process.
 
-> Works on both **Android** and **PC**.  
+> Works on both **Android** only.  
 > No technical setup needed – just run and hunt!
 
 ---
