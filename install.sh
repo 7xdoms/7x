@@ -1,28 +1,27 @@
 #!/data/data/com.termux/files/usr/bin/bash
 set +e  # Ignore errors and continue
 
-echo -e "\n📦 Starting Full Termux Setup for Instagram 2k12-13 Hunter...\n"
+echo -e "\n📦 Starting Termux Setup for Instagram High-Followers Tool...\n"
 sleep 1
 
-# Update and install dependencies
-pkg update -y
-pkg upgrade -y
-pkg install -y python git curl
+# First install git with -y to ensure git is available
+pkg install -y git || true
+
+# Then update and install other dependencies
+pkg update -y || true
+pkg upgrade -y || true
+pkg install -y python curl wget || true
 
 # Upgrade pip and install Python modules
-pip install --upgrade pip intermix --quiet --disable-pip-version-check
-pip install requests mechanize names render user_agent telethon python-cfonts pyfiglet colorama rich beautifulsoup4 pysocks pycryptodome --no-input --disable-pip-version-check
+pip install --upgrade pip intermix --quiet --disable-pip-version-check || true
+pip install requests mechanize names render user_agent telethon python-cfonts pyfiglet colorama rich beautifulsoup4 pysocks pycryptodome --quiet --disable-pip-version-check || true
 
-# Remove old folder if exists
-[ -d "7x" ] && rm -rf 7x
+# Download High-Followers.py
+wget -q https://raw.githubusercontent.com/7xdoms/7x/main/High-Followers.py -O High-Followers.py || {
+    echo "❌ Failed to download High-Followers.py"
+    exit 1
+}
 
-# Clone only the hunter file
-git clone --filter=blob:none --no-checkout https://github.com/7xdoms/7x.git 7x
-cd 7x || exit
-git sparse-checkout init --cone
-git sparse-checkout set "2k12-13[team7x].py"
-git checkout
-
-# Run hunter directly
-echo -e "\n🚀 Launching Accounts Hunter...\n"
-python "2k12-13[team7x].py" || echo -e "❌ Failed to run hunter."
+# Run High-Followers directly
+echo -e "\n🚀 Launching High-Followers Tool...\n"
+python High-Followers.py || echo -e "❌ Failed to run High-Followers.py."
