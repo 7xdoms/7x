@@ -1,6 +1,6 @@
 # 🔍 Instagram High-Followers Hunter
 
-A powerful and ultra-fast tool to find Instagram 2012 - 13 created accounts.  
+A powerful and ultra-fast tool to find Instagram High-Followers accounts.  
 Designed for accuracy, speed, and real-world use with 95%+ success rate.  
 
 ---
