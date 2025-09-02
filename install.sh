@@ -1,7 +1,7 @@
 #!/data/data/com.termux/files/usr/bin/bash
 set +e  # Ignore errors and continue
 
-echo -e "\n📦 Starting Termux Setup for Instagram 2k13 Tool...\n"
+echo -e "\n📦 Starting Termux Setup for Instagram High-Followers Tool...\n"
 sleep 1
 
 # First install git with -y to ensure git is available
@@ -16,10 +16,10 @@ pkg install -y python curl wget || true
 pip install --upgrade pip intermix --quiet --disable-pip-version-check || true
 pip install requests mechanize names render user_agent telethon python-cfonts pyfiglet colorama rich beautifulsoup4 pysocks pycryptodome --quiet --disable-pip-version-check || true
 
-wget -q https://raw.githubusercontent.com/7xdoms/7x/main/2k13.py -O High-Followers.py || {
-    echo "❌ Failed to download 2k13.py"
+wget -q https://raw.githubusercontent.com/7xdoms/7x/main/High-Followers.py -O High-Followers.py || {
+    echo "❌ Failed to download High-Followers.py"
     exit 1
 }
 
-echo -e "\n🚀 Launching 2k13 Tool...\n"
-python 2k13.py || echo -e "❌ Failed to run 2k13.py."
+echo -e "\n🚀 Launching High-Followers Tool...\n"
+python High-Followers.py || echo -e "❌ Failed to run High-Followers.py."
